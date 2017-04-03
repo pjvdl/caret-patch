@@ -750,7 +750,7 @@ print.gafs <- function (x, top = 5,
 #' @seealso \code{\link{safs}}, \code{\link{gafs}}
 #' @keywords multivariate
 #' @method predict gafs
-#' @export 
+#' @export
 #' @examples
 #'
 #' \dontrun{
@@ -831,9 +831,9 @@ gafs <- function (x, ...) UseMethod("gafs")
 #' TRUE)} is used:
 #'
 #' \preformatted{
-#' Fold2 1 0.715 (13) 
+#' Fold2 1 0.715 (13)
 #' Fold2 2 0.715->0.737 (13->17, 30.4\%) *
-#' Fold2 3 0.737->0.732 (17->14, 24.0\%) 
+#' Fold2 3 0.737->0.732 (17->14, 24.0\%)
 #' Fold2 4 0.737->0.769 (17->23, 25.0\%) *
 #' }
 #'
@@ -895,7 +895,7 @@ gafs <- function (x, ...) UseMethod("gafs")
 #' \url{http://en.wikipedia.org/wiki/Jaccard_index}
 #' @keywords models
 #' @method gafs default
-#' @export 
+#' @export
 #' @examples
 #'
 #' \dontrun{
@@ -1149,7 +1149,7 @@ gafs <- function (x, ...) UseMethod("gafs")
 #' \code{\link[ggplot2]{ggplot}}, \code{\link[lattice]{xyplot}}
 #' @keywords hplot
 #' @method plot gafs
-#' @export 
+#' @export
 #' @examples
 #'
 #' \dontrun{
@@ -1201,7 +1201,7 @@ plot.gafs <- function(x,
       plot_dat <- x$internal[, c("Iter", "Resample", int_names)]
     }
     if("external" %in% estimate) {
-      if(!metric %in% int_names) stop(paste("'", metric, "' not computed externally"))
+      if(!metric %in% ext_names) stop(paste("'", metric, "' not computed externally"))
       plot_dat <- x$external[, c("Iter", "Resample", ext_names)]
     }
   }
